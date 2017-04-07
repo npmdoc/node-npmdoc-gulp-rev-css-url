@@ -1,17 +1,40 @@
 {
-    "buildNpmdoc":"gulp-rev-css-url",
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "buildNpmdoc": "gulp-rev-css-url",
+    "description": "api documentation for [gulp-rev-css-url (v0.1.0)](https://github.com/galkinrost/gulp-rev-css-url) [![npm package](https://img.shields.io/npm/v/npmdoc-gulp-rev-css-url.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-gulp-rev-css-url) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-gulp-rev-css-url.svg)](https://travis-ci.org/npmdoc/node-npmdoc-gulp-rev-css-url)",
     "devDependencies": {
-        "gulp-rev-css-url": "*",
         "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "gulp-rev-css-url": "*",
         "utility2": "kaizhu256/node-utility2#alpha"
     },
-    "name":"npmdoc-gulp-rev-css-url",
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmdoc/node-npmdoc-gulp-rev-css-url",
+    "keywords": [
+        "documentation",
+        "gulp-rev-css-url"
+    ],
+    "license": "MIT",
+    "main": "lib.npmdoc_gulp_rev_css_url.js",
+    "name": "npmdoc-gulp-rev-css-url",
+    "nameAlias": "npmdoc_gulp_rev_css_url",
+    "nameOriginal": "npmdoc-gulp-rev-css-url",
+    "os": [
+        "darwin",
+        "linux"
+    ],
     "repository": {
         "type": "git",
         "url": "https://github.com/npmdoc/node-npmdoc-gulp-rev-css-url"
     },
     "scripts": {
-        "build-ci": "utility2 shReadmeTest build_ci.sh"
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "(set -e; npm install \"kaizhu256/node-utility2#alpha\"; utility2 shDeployHeroku)",
+        "postinstall": "if [ -f npm_scripts.sh ]; then ./npm_scripts.sh postinstall; fi",
+        "start": "(set -e; export PORT=${PORT:-8080}; utility2 start test.js)",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
     },
     "version": "0.0.1"
 }
