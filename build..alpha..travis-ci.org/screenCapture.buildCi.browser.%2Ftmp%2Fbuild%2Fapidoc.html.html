@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/galkinrost/gulp-rev-css-url"
-
-    >gulp-rev-css-url (v0.1.0)</a>
+    <a href="https://github.com/galkinrost/gulp-rev-css-url">gulp-rev-css-url (v0.1.0)</a>
 </h1>
 <h4>The lightweight plugin to override urls in css files to hashed after gulp-rev</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.gulp-rev-css-url">module gulp-rev-css-url</a><ol>
 
@@ -89,7 +82,7 @@
     var allowedPathRegExp = /\.(css|js)$/;
 
     function md5(str) {
-        return crypto.createHash(&#x27;md5&#x27;).update(str, &#x27;utf8&#x27;).digest(&#x27;hex&#x27;);
+        return crypto.createHash('md5').update(str, 'utf8').digest('hex');
     }
 
     function relPath(base, filePath) {
@@ -109,7 +102,7 @@
     return through.obj(function (file, enc, cb) {
         var firstFile = null;
 
-        if (file.path &#x26;&#x26; file.revOrigPath) {
+        if (file.path &amp;&amp; file.revOrigPath) {
             firstFile = firstFile || file;
             var _relPath = relPath(path.resolve(firstFile.revOrigBase), file.revOrigPath);
 
@@ -121,8 +114,8 @@
 
             // sort by filename length to not replace the common part(s) of several filenames
             f.sort(function (a, b) {
-                if(a.origPath.length &#x3e; b.origPath.length) return -1;
-                if(a.origPath.length &#x3c; b.origPath.length) return 1;
+                if(a.origPath.length &gt; b.origPath.length) return -1;
+                if(a.origPath.length &lt; b.origPath.length) return 1;
                 return 0;
             });
         }
@@ -132,22 +125,22 @@
         f.forEach(function (_f) {
             var file = _f.file;
 
-            if ((allowedPathRegExp.test(file.revOrigPath) ) &#x26;&#x26; file.contents) {
+            if ((allowedPathRegExp.test(file.revOrigPath) ) &amp;&amp; file.contents) {
                 var contents = file.contents.toString();
                 f.forEach(function (__f) {
-                    var origPath = __f.origPath.replace(new RegExp(&#x27;\\&#x27; + path.sep, &#x27;g&#x27;), &#x27;/&#x27;).replace(/\./g, &#x27;\\.&#x27;);
-                    var hashedPath = __f.hashedPath.replace(new RegExp(&#x27;\\&#x27; + path.sep, &#x27;g&#x27;), &#x27;/&#x27;);
+                    var origPath = __f.origPath.replace(new RegExp('\\' + path.sep, 'g'), '/').replace(/\./g, '\\.');
+                    var hashedPath = __f.hashedPath.replace(new RegExp('\\' + path.sep, 'g'), '/');
                     contents = contents.replace(
-                        new RegExp(origPath, &#x27;g&#x27;),
+                        new RegExp(origPath, 'g'),
                         hashedPath);
                 });
 
                 file.contents = new Buffer(contents);
 
-                // update file&#x27;s hash as it does in gulp-rev plugin
+                // update file's hash as it does in gulp-rev plugin
                 var hash = file.revHash = md5(contents).slice(0, 10);
                 var ext = path.extname(file.path);
-                var filename = path.basename(file.revOrigPath, ext) + &#x27;-&#x27; + hash + ext;
+                var filename = path.basename(file.revOrigPath, ext) + '-' + hash + ext;
                 file.path = path.join(path.dirname(file.path), filename);
 
             }
@@ -168,3 +161,4 @@
     ]
 </div>
 </div>
+</body></html>
