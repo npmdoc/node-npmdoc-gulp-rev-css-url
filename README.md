@@ -1,9 +1,14 @@
-# api documentation for  [gulp-rev-css-url (v0.1.0)](https://github.com/galkinrost/gulp-rev-css-url)  [![npm package](https://img.shields.io/npm/v/npmdoc-gulp-rev-css-url.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-gulp-rev-css-url) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-gulp-rev-css-url.svg)](https://travis-ci.org/npmdoc/node-npmdoc-gulp-rev-css-url)
+# npmdoc-gulp-rev-css-url
+
+#### api documentation for  [gulp-rev-css-url (v0.1.0)](https://github.com/galkinrost/gulp-rev-css-url)  [![npm package](https://img.shields.io/npm/v/npmdoc-gulp-rev-css-url.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-gulp-rev-css-url) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-gulp-rev-css-url.svg)](https://travis-ci.org/npmdoc/node-npmdoc-gulp-rev-css-url)
+
 #### The lightweight plugin to override urls in css files to hashed after gulp-rev
 
-[![NPM](https://nodei.co/npm/gulp-rev-css-url.png?downloads=true)](https://www.npmjs.com/package/gulp-rev-css-url)
+[![NPM](https://nodei.co/npm/gulp-rev-css-url.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/gulp-rev-css-url)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-gulp-rev-css-url/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-gulp-rev-css-url_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-gulp-rev-css-url/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-gulp-rev-css-url/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-gulp-rev-css-url/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-gulp-rev-css-url/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-gulp-rev-css-url/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-gulp-rev-css-url/build/screenCapture.npmPackageListing.svg)
 
@@ -18,7 +23,6 @@
 {
     "author": {
         "name": "Galkin Rostislav",
-        "email": "galkinrost@gmail.com",
         "url": "http://github.com/galkinrost"
     },
     "bugs": {
@@ -62,13 +66,11 @@
     ],
     "maintainers": [
         {
-            "name": "galkinrost",
-            "email": "galkinrost@gmail.com"
+            "name": "galkinrost"
         }
     ],
     "name": "gulp-rev-css-url",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git://github.com/galkinrost/gulp-rev-css-url.git"
@@ -79,16 +81,6 @@
     "version": "0.1.0"
 }
 ```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module gulp-rev-css-url](#apidoc.module.gulp-rev-css-url)
-
-
-
-# <a name="apidoc.module.gulp-rev-css-url"></a>[module gulp-rev-css-url](#apidoc.module.gulp-rev-css-url)
 
 
 
